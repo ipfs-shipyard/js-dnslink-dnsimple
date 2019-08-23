@@ -4,9 +4,9 @@ const meow = require('meow')
 const dnslink = require('.')
 
 const flags = {
-  link: { alias: 'l' },
-  domain: { alias: 'd' },
-  record: { alias: 'r', default: '_dnslink' },
+  link: { type: 'string', alias: 'l' },
+  domain: { type: 'string', alias: 'd' },
+  record: { type: 'string', alias: 'r', default: '_dnslink' },
   sandbox: { type: 'boolean' },
   ttl: { inferType: true, default: 60 }
 }
@@ -35,6 +35,12 @@ async function run () {
   }
   if (!cli.flags.link || !cli.flags.domain) {
     return console.error('Error: --link and --domain are flags are required')
+  }
+  if (cli.flags.t) {
+    return console.error('Error: ttl is a long option. Pass it with two dashes: --ttl')
+  }
+  if (Array.isArray(cli.flags.link) || Array.isArray(cli.flags.domain)) {
+    return console.error('Error: you can only pass a single value to --link and --domain')
   }
 
   // DO IT!
