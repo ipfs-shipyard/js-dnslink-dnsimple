@@ -5,6 +5,7 @@ _Create and update [DNSLink](http://dnslink.io) records via the v2 dnsimple api_
 You may also like
 - [dnslink-cloudflare](https://github.com/ipfs-shipyard/dnslink-cloudflare) - same idea, for Cloudflare
 - [dnslink-deploy](https://github.com/ipfs/dnslink-deploy) - same idea, for Digital Ocean
+- [go dnslink-dnsimple](https://github.com/ipfs/dnslink-dnsimple) - same idea, in go
 
 ## Usage
 
