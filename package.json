@@ -1,6 +1,6 @@
 {
   "name": "dnslink-dnsimple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create and update dnslink records via the v2 dnsimple api",
   "main": "index.js",
   "bin": {
